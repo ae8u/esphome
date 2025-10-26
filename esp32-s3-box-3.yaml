@@ -223,7 +223,9 @@ micro_wake_word:
     - okay_nabu
     - hey_mycroft
     - hey_jarvis
-    - model: https://raw.githubusercontent.com/ae8u/WakeWordVoices/main/english/ok_raivin    
+    - model: https://raw.githubusercontent.com/ae8u/WakeWordVoices/main/english/ok_raivin
+      probability_cutoff: 0.95
+      sliding_window_size: 5
   on_wake_word_detected:
     - voice_assistant.start:
         wake_word: !lambda return wake_word;
